@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #ffe6f0, #ffd6e0);
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 182, 193, 0.6);
+  text-align: center;
+  width: 95%;
+  max-width: 900px;
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5em;
+  color: #ff4d88;
+}
+
+input[type="password"] {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ffb3cc;
+  margin: 10px 0;
+  width: 100%;
+}
+
+button {
+  background-color: #ff66a3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #ff3385;
+}
+
+#gallery-section {
+  display: none;
+  margin-top: 30px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox style */
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  z-index: 999;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+#lightbox:active,
+#lightbox img:active {
+  cursor: zoom-out;
+}
